@@ -1,7 +1,7 @@
 import storyModel from "../../../../DB/models/story.model.js";
 import userModel from "../../../../DB/models/user.model.js";
 import { asyncHandler } from "../../../services/asyncHandler.js";
-
+import { paginate } from "../../../services/pagination.js";
 
  const topPosts = asyncHandler(async (req, res, next) => {
     let {limit,skip} = paginate(req.query.page, req.query.size);
